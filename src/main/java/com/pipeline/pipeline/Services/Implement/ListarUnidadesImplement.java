@@ -16,7 +16,7 @@ import java.util.Map;
 public class ListarUnidadesImplement implements ListarUnidades {
     RestTemplateBuilder restTemplateBuilder = new RestTemplateBuilder();
     MiddlewareGob middlewareGob= new MiddlewareGob(restTemplateBuilder);
-
+    Map<String, Object> m = new HashMap<>();
     @Override
     public Object listarUnidades(String resource_id, int limit) throws JSONException {
 
