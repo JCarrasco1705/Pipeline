@@ -16,7 +16,7 @@ private final RestTemplate restTemplate;
     }
 
     public ResponseEntity<String> getTrasport(String resource_id, int limit){
-        String url ="https://datos.cdmx.gob.mx/api/3/action/datastore_search?resource_id=61fd8d85-9598-4dfe-890b-2780ed26efc8&limit=5";
+        String url ="https://datos.cdmx.gob.mx/api/3/action/datastore_search?resource_id="+resource_id+"&limit="+limit;
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> request = new HttpEntity<>(headers);
         return restTemplate.exchange(url, HttpMethod.GET, request, String.class);

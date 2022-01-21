@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/unidades")
-
 public class ListarUnidadesController {
     @Autowired
     ListarUnidades listarUnidades;
@@ -24,5 +23,4 @@ public class ListarUnidadesController {
         Object listaUGob = listarUnidades.listarUnidades(resource_id, limit);
         return new ResponseEntity(listaUGob, HttpStatus.OK);
     }
-
 }
